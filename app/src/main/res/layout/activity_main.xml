@@ -2,30 +2,30 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:cropToPadding="true"
-    android:adjustViewBounds="true"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tesaja"
-        android:cropToPadding="true"
-        android:adjustViewBounds="true"/>
-
     <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="-16dp"
-        />
+        tools:layout_editor_absoluteY="-16dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/tesaja"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
             android:id="@+id/imageView2"
@@ -37,20 +37,24 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo" />
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:paddingLeft="10dp"
             android:id="@+id/textInputEditText2"
+            android:background="@drawable/form"
             android:layout_width="326dp"
-            android:layout_height="41dp"
+            android:layout_height="43dp"
             android:layout_marginTop="16dp"
             android:hint="Username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:paddingLeft="10dp"
+            android:background="@drawable/form"
             android:id="@+id/editText"
             android:layout_width="326dp"
-            android:layout_height="41dp"
+            android:layout_height="43dp"
             android:layout_marginTop="12dp"
             android:hint="Password"
             app:layout_constraintEnd_toEndOf="@+id/textInputEditText2"
@@ -61,7 +65,7 @@
         <Button
             android:id="@+id/button2"
             android:layout_width="326dp"
-            android:layout_height="60dp"
+            android:layout_height="53dp"
             android:layout_marginTop="20dp"
             android:text="Login"
             app:backgroundTint="@color/blue"
@@ -101,16 +105,5 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="111dp"
-            android:layout_height="54dp"
-            android:layout_marginTop="24dp"
-            android:text="Sign Up"
-            app:backgroundTint="@color/orange"
-            app:cornerRadius="50dp"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
-            app:layout_constraintStart_toStartOf="@+id/linearLayout2"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
